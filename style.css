@@ -1,0 +1,170 @@
+/*Селектори тегів*/
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    color: #3a5a8c;
+}
+
+p {
+    line-height: 1.5;
+}
+
+a {
+    color: #3a5a8c;
+}
+
+/*Шапка та position*/
+header {
+    background-color: #3a5a8c;
+    padding: 20px;
+    position: relative; /*щоб badge позиціонувався всередині шапки*/
+}
+
+/*селектор id*/
+#badge {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    background-color: orange;
+    color: black;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+/*Меню та float*/
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    float: left;
+    background-color: #222222;
+}
+
+nav a {
+    display: block;
+    color: white;
+    padding: 12px 18px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #555555;
+}
+
+/*скидання float щоб меню не ламало решту сторінки*/
+.clear {
+    clear: both;
+}
+
+/*Основний контент*/
+main {
+    padding: 20px;
+}
+
+/*селектор класу*/
+.news {
+    background-color: white;
+    border: 1px solid #cccccc;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+}
+
+/*Форма реєстрації*/
+#reg-form {
+    position: fixed;      /*не прокручується разом зі сторінкою*/
+    top: 80px;
+    left: 50%;            /*лівий край форми всередині екрану*/
+    margin-left: -160px;  /*зрушення на половину ширини виходить центр*/
+    width: 320px;
+    box-sizing: border-box;
+    padding: 15px 20px;
+    background-color: #ffffff;
+    border: 2px solid #3a5a8c;
+    box-shadow: 0 0 15px gray;
+    max-height: 90vh;
+    overflow-y: auto;
+    z-index: 10;
+}
+
+#reg-form h2 {
+    margin-top: 0;
+    text-align: center;
+}
+
+#reg-form label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 3px;
+    font-size: 14px;
+}
+
+#reg-form input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 6px;
+    border: 2px solid gray;
+    border-left-width: 2px;
+}
+
+/*обов'язкові поля товстий лівий кордон*/
+#reg-form input:required {
+    border-left-width: 8px;
+}
+
+/*необов'язкові поля тонка ліва межа*/
+#reg-form input:optional {
+    border-left-width: 2px;
+}
+
+/*поле заповнено правильно*/
+#reg-form input:valid {
+    border-color: green;
+    background-color: #eaffea;
+}
+
+/*поле заповнене неправильно або порожнє але обов'язкове*/
+#reg-form input:invalid {
+    border-color: red;
+    background-color: #ffeaea;
+}
+
+/*коли поле вибрано*/
+#reg-form input:focus {
+    outline: none;
+    background-color: #fffbe0;
+}
+
+/*чекбокс не повинен бути на всю ширину*/
+#reg-form input[type="checkbox"] {
+    width: auto;
+}
+
+#reg-form button {
+    display: block;
+    width: 100%;
+    margin-top: 15px;
+    padding: 8px;
+    background-color: #3a5a8c;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#reg-form button:hover {
+    background-color: #284368;
+}
+
+.hint {
+    font-size: 12px;
+    color: gray;
+    margin-bottom: 0;
+}
